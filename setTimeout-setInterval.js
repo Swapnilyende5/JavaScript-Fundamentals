@@ -1,4 +1,4 @@
-// setTimeout
+// ----------- setTimeout ------------
 
 // let b = prompt("clear timeout? press yes or no");
 // let a = setTimeout(() => {
@@ -9,7 +9,7 @@
 //   clearTimeout(a);
 // }
 
-// setTimeout - with Counter App in Plain JavaScript
+// ----------- setTimeout - with Counter App in Plain JavaScript ------------
 
 let count = 0;
 let myCounter;
