@@ -11,6 +11,7 @@ console.log(newArray);
 
 let myName = "Swapnil";
 console.log(Array.from(myName));
+console.log(myName.split(""));
 
 // ----------- ✨ Array Manipulation (Mutating) Methods ----------------
 // 1. Array.push();
@@ -151,3 +152,13 @@ for (let k of arr.values()) console.log(k);
 
 // 25. Array.entries(): print index with values in array
 for (let [i, v] of arr.entries()) console.log(i, v);
+
+let a = [1, 5, 2, 4, 5];
+let b = [5, 8, 74, 5, 1, 5];
+
+// a.map((n) => {
+//   return b.push(n);
+// });
+a.forEach((n) => b.push(n));
+b.sort((a, b) => a - b);
+console.log(b);
