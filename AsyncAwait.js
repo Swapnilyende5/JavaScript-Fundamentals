@@ -8,13 +8,19 @@
 
 // Async functions Always returns a promise
 
-// // Sending just string "swapnil"
+// Sending just string "swapnil"
 // async function getdata() {
 //   return "swapnil";
 // }
-// const data = getdata();
-// data.then((data) => console.log(data));
-// // but getting Promise as a output
+// const data = getdata().then((data) => console.log(data));
+// Or
+// try {
+//   const data = getdata();
+//   console.log(data);
+// } catch (err) {
+//   console.log("Error", err);
+// }
+// but getting Promise as a output
 
 // // creating and sending Promise to async function
 // const newPromise = new Promise((res, rej) => res("Promise resolved"));
@@ -23,11 +29,12 @@
 // }
 // const newPromiseData = getPromiseData();
 // newPromiseData.then((data) => console.log(data));
-// // getting Promise as a output
+// getting Promise as a output
 
 // ---------------------------------------------------------------------
 
-// Promises - 1) Scenario one
+// Promises - 1) Scenario one - CHECK THIS SCENARIO CAREFULLY - How it is executing consoles.
+// it stops all operations in async function when hits await but it will continue operations outside of async func
 // const p = new Promise((res, rej) => {
 //   setTimeout(() => {
 //     res("Promise resolved ");
@@ -41,6 +48,7 @@
 //   console.log(pData); // then "Promise resolved" will print
 // }
 // getPromise();
+// console.log("End");
 
 // ---------------------------
 
@@ -64,8 +72,8 @@
 
 //   const pData2 = await p2; // Even though it resolved in 5 secs JS didn't reach here to ptint in 5 sec, because the above promise wil take 10 sec
 //   // once above 10 sec promise resolved all consoles will be printed
-//   console.log("namaste JS 2");
 //   console.log(pData2);
+//   console.log("namaste JS 2");
 // }
 // getPromise();
 
@@ -73,7 +81,7 @@
 
 // Fetch Github User API data Example.
 // and Error Handling with Try Catch
-const USER_API = "https://api.github.com/users/akshaymarch7";
+const USER_API = "https://api.github.com/users/Swapnilyende5";
 
 async function getUSer() {
   try {
@@ -84,5 +92,5 @@ async function getUSer() {
     console.log("Error", err);
   }
 }
-// getUSer();
-// getUSer().catch((err) => console.log(err)); // also this is the way to handle error instead of try catch
+getUSer();
+getUSer().catch((err) => console.log(err)); // also this is the way to handle error instead of try catch

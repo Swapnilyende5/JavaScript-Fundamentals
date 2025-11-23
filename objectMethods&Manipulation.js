@@ -30,7 +30,7 @@ console.log(obj["name"]);
 
 // ------------ 5️⃣ Add / Update Properties -----------
 obj.email = "swapnil@gmail.com";
-obj["mobile"] = 98765432;
+obj["mobile"] = 9876543210;
 console.log(obj);
 
 // ------------ 6️⃣ Delete Properties -----------

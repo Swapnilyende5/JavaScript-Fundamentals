@@ -91,6 +91,7 @@ console.log(flatArray);
 
 // ----------- 🔍 Searching & Finding Methods ----------------
 let arr = [10, 20, 30, 30, 40, 50];
+
 console.log(arr.forEach((v) => console.log(v)));
 // 13. indexOf
 console.log(arr.indexOf(30));
@@ -104,7 +105,7 @@ console.log(arr.includes(20));
 // 16. find() // returns the first value which passed condition
 console.log(arr.find((i) => i > 25));
 
-// 18. some() // true when anyone matches the condition
+// 18. some() // true when any one matches the condition
 console.log(arr.some((n) => n == 50));
 
 // 19. every() // true when every item matches the condition
@@ -125,14 +126,15 @@ console.log(arr.toString());
 // 20. reduce()
 console.log(arr.reduce((sum, n) => sum + n, 0));
 // reduce is like below for loop function where sum = 0 which is getting +
-function reduce(arr) {
+function reduced(arr) {
   let sum = 0;
   for (let i = 0; i < arr.length; i++) {
-    sum = sum + arr[i];
+    let n = arr[i];
+    sum = sum + n;
   }
   return sum;
 }
-console.log(reduce(arr));
+console.log(reduced(arr));
 
 // 21. Checking Array Type
 console.log(Array.isArray(arr));
