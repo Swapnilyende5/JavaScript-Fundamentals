@@ -37,7 +37,9 @@ function validateCart(cart) {
 // const p3 = new Promise((res, rej) => {
 //   setTimeout(() => res("p3 successed"), 1000);
 // });
-// Promise.all([p1, p2, p3]).then((res) => console.log(res)).catch((err) => console.log(err));;
+// Promise.all([p1, p2, p3])
+//   .then((res) => console.log(res))
+//   .catch((err) => console.log(err));
 // After 5 secs - output :  [ 'p1 successed', 'p2 successed', 'p3 successed' ]
 
 // Promise.all - One API Fails
@@ -191,17 +193,17 @@ function validateCart(cart) {
 
 // Interview Que
 
-console.log("Start");
-setTimeout(() => {
-  console.log("Timeout 1");
-}, 0);
-setImmediate(() => {
-  console.log("Immediate");
-});
-setInterval(() => {
-  console.log("Interval");
-}, 1000);
-Promise.resolve().then(() => {
-  console.log("Promise");
-});
-console.log("End");
+// console.log("Start");
+// setTimeout(() => {
+//   console.log("Timeout 1");
+// }, 0);
+// setImmediate(() => {
+//   console.log("Immediate");
+// });
+// setInterval(() => {
+//   console.log("Interval");
+// }, 1000);
+// Promise.resolve().then(() => {
+//   console.log("Promise");
+// });
+// console.log("End");

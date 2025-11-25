@@ -7,7 +7,7 @@ let user = {
     console.log(this.address.city);
   },
 };
-let users = [{ name: "Swapnil" }];
+let users = [{ name: "Swapnil" }, 4];
 
 // ----------- 1️⃣. Optional Chaining ---------------
 // Safe way to access object properties without throwing an error when values are undefined or null.
@@ -33,10 +33,11 @@ console.log(1 || "default");
 const s = new Set();
 s.add(5);
 console.log(s);
-
 console.log(s.has(5));
 
 s.delete(5);
+s.add(1);
+s.add(2);
 console.log(s);
 
 function dups(arr) {
@@ -44,7 +45,7 @@ function dups(arr) {
 }
 console.log(dups([1, 2, 2, 3]));
 
-// ------------ 4️⃣. Map ---------------------
+// ------------ 4️⃣. Map ------------------------
 // Key-value structure like Object but with superpowers
 const newMap = new Map();
 newMap.set("name", "Swapnil");
@@ -65,10 +66,10 @@ for (let [k, v] of newMap) {
 // Avoid global variable pollution
 // Keeps variables private
 // Execute code immediately
-(function () {
-  const newMap = "Map";
-  console.log(newMap);
-})();
+(function (name) {
+  const newMap = "Hello";
+  console.log(newMap, Array.from("name"));
+})("Swapnil");
 
 // Arrow IIFE
 ((name) => {
@@ -98,7 +99,7 @@ console.log(double(5));
 
 // Examples: Built-in HOF's => map(), filter(), reduce(), forEach();
 
-// ------------ 7️⃣. Higher Order Functions (HOF) ---------------------
+// ------------ 7️⃣. Callback Functions (HOF) ---------------------
 
 // A callback function is a function passed as an argument to another function, which is then executed inside that function.
 // It’s called a “callback” because it’s called back later — not immediately.

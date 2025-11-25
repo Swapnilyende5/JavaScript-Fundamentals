@@ -36,9 +36,9 @@ console.log(user, employee);
 let c = 10;
 let d = c;
 
-// a stores actual value 10 in memory
-// b receives a new separate copy
-// Changing b doesn’t affect a
+// c stores actual value 10 in memory
+// d receives a new separate copy
+// Changing d doesn’t affect c
 
 // Stack Memory
 // a: 10
